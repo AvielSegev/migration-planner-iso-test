@@ -8,7 +8,3 @@ RUN curl -L -o /rhcos.iso \
 # Verify checksum
 RUN echo "6a9cf9df708e014a2b44f372ab870f873cf2db5685f9ef4518f52caa36160c36  /rhcos.iso" | sha256sum -c -
 
-# Final stage: minimal image with only the ISO
-FROM scratch
-COPY --from=builder /rhcos.iso /
-

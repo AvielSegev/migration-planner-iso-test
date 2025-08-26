@@ -50,8 +50,6 @@ spec:
         value: $(params.output-image)
       - name: build-task-status
         value: $(tasks.build-image-index.status)
-      - name: build-args-file
-        value: $(params.build-args-file)
       taskRef:
         params:
         - name: name
